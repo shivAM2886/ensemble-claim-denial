@@ -1,0 +1,7 @@
+# requires python 3.11 
+pandas
+scikit-learn
+optuna
+matplotlib
+xgboost==3.2.0
+shap==0.51.0
