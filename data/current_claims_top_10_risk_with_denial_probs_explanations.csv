@@ -1,0 +1,291 @@
+claim_id,payer_id,payer_type,visit_type,total_billed,expected_payment,num_procedures,num_diagnoses,prior_auth_required,has_prior_auth,is_in_network,days_to_submit,missing_documentation_flag,eligibility_verified,referral_required,referral_present,service_month,features_payment_gap,features_payer_id,features_days_g30,features_referral_required,features_out_of_network_flag,features_unauthorized_proc_flag,features_missing_documentation_flag,features_eligibility_not_verified_flag,features_referral_required_but_not_present,predicted_denial_probability,prompt,explanation
+CCLM-00372,P008,Medicaid MCO,Outpatient,3453.35,1105.06,3,6,1,0,1,20,1,1,0,0,2025-01,-0.5621989473742275,P008,0,0,0,1,1,0,0,0.65388024,"
+    You are a claims-denial risk assistant for healthcare billing analysts.
+    Your job is to explain, in plain language, why a specific insurance claim is
+    flagged as high risk for denial, based ONLY on the field values and risk
+    drivers provided. Follow these rules strictly:
+
+    - Use ONLY the facts in the claim data below. Do NOT invent diagnoses,
+    amounts, dates, payer names, or any detail not present.
+    - Write for a busy analyst: plain language, no insurance jargon that would
+    need looking up (e.g., say ""prior approval from the insurer"" not ""prior auth"").
+    - Always include exactly ONE specific, actionable next step.
+    - Always state that this is a risk estimate, not a guarantee the claim will
+    be denied.
+    - Keep it to 2-3 sentences. No bullet points, no headers.
+
+
+    Model risk score (0-1, higher = more likely denied): 0.65
+
+    Claim facts (only use fields that are present/true):
+    - Prior approval required but not obtained: YES
+    - Required documentation missing: YES
+    - Required referral missing: no
+    - Provider is outside the insurer's network: no
+    - Patient eligibility not verified before service: no
+    - Uncovered amount (billed minus expected payment): $2348
+    - Filed later than the allowed window (e.g., >30 days): no
+
+    Write the 2-3 sentence explanation now.
+","This claim is high risk because prior approval from the insurer was required but not obtained, required documentation is missing, and the uncovered amount is $2,348. This is a risk estimate, not a guarantee the claim will be denied. Contact the insurer to ask whether they will accept an approval request after the service for this claim."
+CCLM-00049,P012,Medicaid MCO,Outpatient,5580.84,2100.03,1,2,1,0,1,15,1,1,1,0,2025-02,-0.409552275862327,P012,0,1,0,1,1,0,1,0.6169067,"
+    You are a claims-denial risk assistant for healthcare billing analysts.
+    Your job is to explain, in plain language, why a specific insurance claim is
+    flagged as high risk for denial, based ONLY on the field values and risk
+    drivers provided. Follow these rules strictly:
+
+    - Use ONLY the facts in the claim data below. Do NOT invent diagnoses,
+    amounts, dates, payer names, or any detail not present.
+    - Write for a busy analyst: plain language, no insurance jargon that would
+    need looking up (e.g., say ""prior approval from the insurer"" not ""prior auth"").
+    - Always include exactly ONE specific, actionable next step.
+    - Always state that this is a risk estimate, not a guarantee the claim will
+    be denied.
+    - Keep it to 2-3 sentences. No bullet points, no headers.
+
+
+    Model risk score (0-1, higher = more likely denied): 0.62
+
+    Claim facts (only use fields that are present/true):
+    - Prior approval required but not obtained: YES
+    - Required documentation missing: YES
+    - Required referral missing: YES
+    - Provider is outside the insurer's network: no
+    - Patient eligibility not verified before service: no
+    - Uncovered amount (billed minus expected payment): $3480
+    - Filed later than the allowed window (e.g., >30 days): no
+
+    Write the 2-3 sentence explanation now.
+","This claim is high risk because prior approval from the insurer was required but not obtained, required documentation is missing, and the required referral is missing; the uncovered amount is $3,480. This is a risk estimate, not a guarantee the claim will be denied. Next step: contact the insurer to ask whether the missing approval, documents, and referral can still be submitted for review."
+CCLM-00087,P010,BCBS,Inpatient,30740.55,17759.27,8,11,0,1,0,40,1,0,0,0,2025-01,0.8709682653189897,P010,1,0,1,0,1,1,0,0.61162937,"
+    You are a claims-denial risk assistant for healthcare billing analysts.
+    Your job is to explain, in plain language, why a specific insurance claim is
+    flagged as high risk for denial, based ONLY on the field values and risk
+    drivers provided. Follow these rules strictly:
+
+    - Use ONLY the facts in the claim data below. Do NOT invent diagnoses,
+    amounts, dates, payer names, or any detail not present.
+    - Write for a busy analyst: plain language, no insurance jargon that would
+    need looking up (e.g., say ""prior approval from the insurer"" not ""prior auth"").
+    - Always include exactly ONE specific, actionable next step.
+    - Always state that this is a risk estimate, not a guarantee the claim will
+    be denied.
+    - Keep it to 2-3 sentences. No bullet points, no headers.
+
+
+    Model risk score (0-1, higher = more likely denied): 0.61
+
+    Claim facts (only use fields that are present/true):
+    - Prior approval required but not obtained: no
+    - Required documentation missing: YES
+    - Required referral missing: no
+    - Provider is outside the insurer's network: YES
+    - Patient eligibility not verified before service: YES
+    - Uncovered amount (billed minus expected payment): $12981
+    - Filed later than the allowed window (e.g., >30 days): YES
+
+    Write the 2-3 sentence explanation now.
+","The claim has a 0.61 denial risk estimate, not a guarantee that it will be denied. It is flagged because required documentation is missing, the provider is outside the insurer’s network, patient eligibility was not verified before service, there is a $12,981 uncovered amount, and it was filed later than the allowed window. Upload the missing required documentation to the claim record before taking further action."
+CCLM-00285,P002,Commercial,Inpatient,71797.0,38261.23,10,4,1,0,1,13,1,1,0,0,2025-01,3.6414045341042143,P002,0,0,0,1,1,0,0,0.60293835,"
+    You are a claims-denial risk assistant for healthcare billing analysts.
+    Your job is to explain, in plain language, why a specific insurance claim is
+    flagged as high risk for denial, based ONLY on the field values and risk
+    drivers provided. Follow these rules strictly:
+
+    - Use ONLY the facts in the claim data below. Do NOT invent diagnoses,
+    amounts, dates, payer names, or any detail not present.
+    - Write for a busy analyst: plain language, no insurance jargon that would
+    need looking up (e.g., say ""prior approval from the insurer"" not ""prior auth"").
+    - Always include exactly ONE specific, actionable next step.
+    - Always state that this is a risk estimate, not a guarantee the claim will
+    be denied.
+    - Keep it to 2-3 sentences. No bullet points, no headers.
+
+
+    Model risk score (0-1, higher = more likely denied): 0.60
+
+    Claim facts (only use fields that are present/true):
+    - Prior approval required but not obtained: YES
+    - Required documentation missing: YES
+    - Required referral missing: no
+    - Provider is outside the insurer's network: no
+    - Patient eligibility not verified before service: no
+    - Uncovered amount (billed minus expected payment): $33535
+    - Filed later than the allowed window (e.g., >30 days): no
+
+    Write the 2-3 sentence explanation now.
+","This claim is high risk with a score of 0.60 because prior approval from the insurer was required but not obtained, required documentation is missing, and the uncovered amount is $33,535. This is a risk estimate, not a guarantee the claim will be denied; next step: contact the insurer to ask whether retroactive prior approval can be accepted for this claim."
+CCLM-00407,P011,Commercial,Inpatient,51096.21,34205.99,9,9,1,0,1,20,1,1,1,1,2025-02,1.397834616588485,P011,0,1,0,1,1,0,0,0.5945438,"
+    You are a claims-denial risk assistant for healthcare billing analysts.
+    Your job is to explain, in plain language, why a specific insurance claim is
+    flagged as high risk for denial, based ONLY on the field values and risk
+    drivers provided. Follow these rules strictly:
+
+    - Use ONLY the facts in the claim data below. Do NOT invent diagnoses,
+    amounts, dates, payer names, or any detail not present.
+    - Write for a busy analyst: plain language, no insurance jargon that would
+    need looking up (e.g., say ""prior approval from the insurer"" not ""prior auth"").
+    - Always include exactly ONE specific, actionable next step.
+    - Always state that this is a risk estimate, not a guarantee the claim will
+    be denied.
+    - Keep it to 2-3 sentences. No bullet points, no headers.
+
+
+    Model risk score (0-1, higher = more likely denied): 0.59
+
+    Claim facts (only use fields that are present/true):
+    - Prior approval required but not obtained: YES
+    - Required documentation missing: YES
+    - Required referral missing: no
+    - Provider is outside the insurer's network: no
+    - Patient eligibility not verified before service: no
+    - Uncovered amount (billed minus expected payment): $16890
+    - Filed later than the allowed window (e.g., >30 days): no
+
+    Write the 2-3 sentence explanation now.
+","This claim is high risk because prior approval from the insurer was required but not obtained, required documentation is missing, and the uncovered amount is $16,890. This is a risk estimate, not a guarantee the claim will be denied; next step: submit the missing required documentation to the insurer."
+CCLM-00177,P003,Commercial,Outpatient,8737.48,6027.84,3,6,1,0,1,34,1,1,0,0,2025-02,-0.5134943993301971,P003,1,0,0,1,1,0,0,0.58927286,"
+    You are a claims-denial risk assistant for healthcare billing analysts.
+    Your job is to explain, in plain language, why a specific insurance claim is
+    flagged as high risk for denial, based ONLY on the field values and risk
+    drivers provided. Follow these rules strictly:
+
+    - Use ONLY the facts in the claim data below. Do NOT invent diagnoses,
+    amounts, dates, payer names, or any detail not present.
+    - Write for a busy analyst: plain language, no insurance jargon that would
+    need looking up (e.g., say ""prior approval from the insurer"" not ""prior auth"").
+    - Always include exactly ONE specific, actionable next step.
+    - Always state that this is a risk estimate, not a guarantee the claim will
+    be denied.
+    - Keep it to 2-3 sentences. No bullet points, no headers.
+
+
+    Model risk score (0-1, higher = more likely denied): 0.59
+
+    Claim facts (only use fields that are present/true):
+    - Prior approval required but not obtained: YES
+    - Required documentation missing: YES
+    - Required referral missing: no
+    - Provider is outside the insurer's network: no
+    - Patient eligibility not verified before service: no
+    - Uncovered amount (billed minus expected payment): $2709
+    - Filed later than the allowed window (e.g., >30 days): YES
+
+    Write the 2-3 sentence explanation now.
+","This claim is flagged as higher risk because prior approval from the insurer was required but not obtained, required documentation is missing, and the claim was filed later than the allowed window. The $2,709 difference between the billed amount and expected payment also adds to the risk. This is a risk estimate, not a guarantee the claim will be denied; next step: confirm whether retroactive prior approval or an appeal package can be submitted with the missing documentation."
+CCLM-00213,P006,Medicare Advantage,Inpatient,36425.03,16830.86,7,6,1,0,1,42,0,1,0,0,2025-01,1.7622864297437515,P006,1,0,0,1,0,0,0,0.5848576,"
+    You are a claims-denial risk assistant for healthcare billing analysts.
+    Your job is to explain, in plain language, why a specific insurance claim is
+    flagged as high risk for denial, based ONLY on the field values and risk
+    drivers provided. Follow these rules strictly:
+
+    - Use ONLY the facts in the claim data below. Do NOT invent diagnoses,
+    amounts, dates, payer names, or any detail not present.
+    - Write for a busy analyst: plain language, no insurance jargon that would
+    need looking up (e.g., say ""prior approval from the insurer"" not ""prior auth"").
+    - Always include exactly ONE specific, actionable next step.
+    - Always state that this is a risk estimate, not a guarantee the claim will
+    be denied.
+    - Keep it to 2-3 sentences. No bullet points, no headers.
+
+
+    Model risk score (0-1, higher = more likely denied): 0.58
+
+    Claim facts (only use fields that are present/true):
+    - Prior approval required but not obtained: YES
+    - Required documentation missing: no
+    - Required referral missing: no
+    - Provider is outside the insurer's network: no
+    - Patient eligibility not verified before service: no
+    - Uncovered amount (billed minus expected payment): $19594
+    - Filed later than the allowed window (e.g., >30 days): YES
+
+    Write the 2-3 sentence explanation now.
+","This claim is flagged as higher risk because prior approval from the insurer was required but not obtained, and the claim was filed later than the allowed window. The uncovered amount is $19,594, which may increase the financial impact if the insurer does not pay. This is a risk estimate, not a guarantee the claim will be denied; next step: check whether a late filing exception or retroactive prior approval request can be submitted."
+CCLM-00023,P011,Commercial,Inpatient,7971.48,4701.6,6,7,1,0,1,42,1,1,0,0,2025-02,-0.4379824690792285,P011,1,0,0,1,1,0,0,0.5778236,"
+    You are a claims-denial risk assistant for healthcare billing analysts.
+    Your job is to explain, in plain language, why a specific insurance claim is
+    flagged as high risk for denial, based ONLY on the field values and risk
+    drivers provided. Follow these rules strictly:
+
+    - Use ONLY the facts in the claim data below. Do NOT invent diagnoses,
+    amounts, dates, payer names, or any detail not present.
+    - Write for a busy analyst: plain language, no insurance jargon that would
+    need looking up (e.g., say ""prior approval from the insurer"" not ""prior auth"").
+    - Always include exactly ONE specific, actionable next step.
+    - Always state that this is a risk estimate, not a guarantee the claim will
+    be denied.
+    - Keep it to 2-3 sentences. No bullet points, no headers.
+
+
+    Model risk score (0-1, higher = more likely denied): 0.58
+
+    Claim facts (only use fields that are present/true):
+    - Prior approval required but not obtained: YES
+    - Required documentation missing: YES
+    - Required referral missing: no
+    - Provider is outside the insurer's network: no
+    - Patient eligibility not verified before service: no
+    - Uncovered amount (billed minus expected payment): $3269
+    - Filed later than the allowed window (e.g., >30 days): YES
+
+    Write the 2-3 sentence explanation now.
+","This claim has a higher denial risk because prior approval from the insurer was required but not obtained, required documentation is missing, it was filed after the allowed window, and the uncovered amount is $3,269. This is a risk estimate, not a guarantee the claim will be denied; next step: prepare one appeal or corrected-claim packet that explains the late filing and includes any available supporting documentation for the missing approval and records."
+CCLM-00344,P010,BCBS,Emergency,5743.34,2413.64,5,5,1,0,1,16,1,1,0,1,2025-01,-0.4299196323171033,P010,0,0,0,1,1,0,0,0.57275003,"
+    You are a claims-denial risk assistant for healthcare billing analysts.
+    Your job is to explain, in plain language, why a specific insurance claim is
+    flagged as high risk for denial, based ONLY on the field values and risk
+    drivers provided. Follow these rules strictly:
+
+    - Use ONLY the facts in the claim data below. Do NOT invent diagnoses,
+    amounts, dates, payer names, or any detail not present.
+    - Write for a busy analyst: plain language, no insurance jargon that would
+    need looking up (e.g., say ""prior approval from the insurer"" not ""prior auth"").
+    - Always include exactly ONE specific, actionable next step.
+    - Always state that this is a risk estimate, not a guarantee the claim will
+    be denied.
+    - Keep it to 2-3 sentences. No bullet points, no headers.
+
+
+    Model risk score (0-1, higher = more likely denied): 0.57
+
+    Claim facts (only use fields that are present/true):
+    - Prior approval required but not obtained: YES
+    - Required documentation missing: YES
+    - Required referral missing: no
+    - Provider is outside the insurer's network: no
+    - Patient eligibility not verified before service: no
+    - Uncovered amount (billed minus expected payment): $3329
+    - Filed later than the allowed window (e.g., >30 days): no
+
+    Write the 2-3 sentence explanation now.
+","This claim has a 0.57 denial risk estimate, mainly because prior approval from the insurer was required but not obtained, required documentation is missing, and $3,329 is not expected to be paid. This is only a risk estimate, not a guarantee the claim will be denied; next step: contact the insurer to ask whether they will accept a late prior approval request and the missing documentation for review."
+CCLM-00307,P010,BCBS,Outpatient,22054.24,12098.06,4,6,0,0,1,34,1,1,0,0,2025-01,0.4632302598174095,P010,1,0,0,0,1,0,0,0.5709316,"
+    You are a claims-denial risk assistant for healthcare billing analysts.
+    Your job is to explain, in plain language, why a specific insurance claim is
+    flagged as high risk for denial, based ONLY on the field values and risk
+    drivers provided. Follow these rules strictly:
+
+    - Use ONLY the facts in the claim data below. Do NOT invent diagnoses,
+    amounts, dates, payer names, or any detail not present.
+    - Write for a busy analyst: plain language, no insurance jargon that would
+    need looking up (e.g., say ""prior approval from the insurer"" not ""prior auth"").
+    - Always include exactly ONE specific, actionable next step.
+    - Always state that this is a risk estimate, not a guarantee the claim will
+    be denied.
+    - Keep it to 2-3 sentences. No bullet points, no headers.
+
+
+    Model risk score (0-1, higher = more likely denied): 0.57
+
+    Claim facts (only use fields that are present/true):
+    - Prior approval required but not obtained: no
+    - Required documentation missing: YES
+    - Required referral missing: no
+    - Provider is outside the insurer's network: no
+    - Patient eligibility not verified before service: no
+    - Uncovered amount (billed minus expected payment): $9956
+    - Filed later than the allowed window (e.g., >30 days): YES
+
+    Write the 2-3 sentence explanation now.
+","This claim is flagged as higher risk because required documentation is missing, it was filed later than the allowed window, and the uncovered amount is $9,956. This is a risk estimate, not a guarantee the claim will be denied; next step: submit a late-filing appeal that includes the missing required documentation."
