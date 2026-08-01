@@ -31,3 +31,22 @@ USER_PROMPT = """
 """
 
 PROMPT = SYSTEM_PROMPT + "\n" + USER_PROMPT
+
+
+def yn(v):
+    """Convert a 0/1 flag into readable YES/no."""
+    return "YES" if int(v) == 1 else "no"
+
+
+def get_prompt(row):
+    user_filled = PROMPT.format(
+        risk_score=f"{row['predicted_denial_probability']:.2f}",
+        prior_auth_missing=yn(row.get("features_unauthorized_proc_flag", 0)),
+        missing_documentation=yn(row.get("features_missing_documentation_flag", 0)),
+        missing_referral=yn(row.get("features_referral_required_but_not_present", 0)),
+        out_of_network=yn(row.get("features_out_of_network_flag", 0)),
+        unverified_eligibility=yn(row.get("features_eligibility_not_verified_flag", 0)),
+        patient_responsibility_delta=f"${int(row['total_billed'] - row['expected_payment'])}",
+        timely_filing_flag=yn(row.get("features_days_g30", 0)),
+    )
+    return user_filled
