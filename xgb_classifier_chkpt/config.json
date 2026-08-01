@@ -11,13 +11,13 @@
     "tree_method": "hist",
     "enable_categorical": true,
     "n_jobs": -1,
-    "learning_rate": 0.006827364330038138,
-    "max_depth": 2,
-    "min_child_weight": 6,
-    "subsample": 0.7208296602973425,
-    "colsample_bytree": 0.7434161423519167,
-    "reg_alpha": 0.03883295742781378,
-    "reg_lambda": 2.9268240620777872
+    "learning_rate": 0.054577735904622324,
+    "max_depth": 5,
+    "min_child_weight": 20,
+    "subsample": 0.6528121832981139,
+    "colsample_bytree": 0.9468677585073009,
+    "reg_alpha": 0.09060970291676543,
+    "reg_lambda": 4.191102699560144
   },
-  "best_value": 0.5242718446601942
+  "best_value": 0.5071428571428571
 }
