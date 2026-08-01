@@ -1,22 +1,25 @@
 split,denial_reason,count,count_perc
-train,Payer policy or medical necessity issue,82,34.45
-train,Documentation incomplete or missing,39,16.39
-train,Claim submitted after timely filing deadline,28,11.76
-train,Procedure or diagnosis coding error,27,11.34
-train,Provider not in network for this payer,26,10.92
-train,Referral required but not present,18,7.56
-train,Patient eligibility could not be verified,18,7.56
-validation,Payer policy or medical necessity issue,22,44.0
-validation,Claim submitted after timely filing deadline,11,22.0
-validation,Documentation incomplete or missing,5,10.0
-validation,Provider not in network for this payer,5,10.0
+train,Payer policy or medical necessity issue,88,43.56
+train,Provider not in network for this payer,26,12.87
+train,Claim submitted after timely filing deadline,21,10.4
+train,Procedure or diagnosis coding error,21,10.4
+train,Patient eligibility could not be verified,16,7.92
+train,Documentation incomplete or missing,13,6.44
+train,Referral required but not present,13,6.44
+train,Authorization required but not on file,4,1.98
+validation,Payer policy or medical necessity issue,24,48.0
+validation,Claim submitted after timely filing deadline,12,24.0
+validation,Provider not in network for this payer,4,8.0
 validation,Procedure or diagnosis coding error,3,6.0
 validation,Referral required but not present,2,4.0
+validation,Documentation incomplete or missing,2,4.0
 validation,Patient eligibility could not be verified,2,4.0
-test,Payer policy or medical necessity issue,27,34.18
-test,Claim submitted after timely filing deadline,16,20.25
-test,Procedure or diagnosis coding error,9,11.39
-test,Documentation incomplete or missing,8,10.13
-test,Referral required but not present,8,10.13
-test,Provider not in network for this payer,7,8.86
-test,Patient eligibility could not be verified,4,5.06
+validation,Authorization required but not on file,1,2.0
+test,Payer policy or medical necessity issue,28,40.58
+test,Procedure or diagnosis coding error,10,14.49
+test,Provider not in network for this payer,8,11.59
+test,Referral required but not present,7,10.14
+test,Claim submitted after timely filing deadline,7,10.14
+test,Patient eligibility could not be verified,6,8.7
+test,Documentation incomplete or missing,2,2.9
+test,Authorization required but not on file,1,1.45
