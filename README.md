@@ -2,6 +2,13 @@
 
 A machine learning pipeline for evaluating and predicting health insurance claim denials, featuring false negative analysis, feature engineering insights, and SHAP-based feature importance.
 
+## Table of Important Contents
+
+- **Final Report:** [Predicting Claim Denials.pdf](https://github.com/shivAM2886/ensemble-claim-denial/blob/main/Predicting%20Claim%20Denials.pdf)
+- **Predictions on Current Claims:** [current_claims_with_denial_probs.csv](https://github.com/shivAM2886/ensemble-claim-denial/blob/main/data/current_claims_with_denial_probs.csv)
+- **Top 10 Riskiest Current Claims (with LLM Explanations):** [current_claims_top_10_risk_with_denial_probs_explanations.csv](https://github.com/shivAM2886/ensemble-claim-denial/blob/main/data/current_claims_top_10_risk_with_denial_probs_explanations.csv)
+
+
 ## Requirements
 
 - **Python 3.11 or higher**
